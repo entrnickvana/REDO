@@ -14,6 +14,8 @@ static void set_var(script_var *var, int new_value);
 
 /* You probably shouldn't change main at all. */
 
+// ARB MODIFICATION
+
 int main(int argc, char **argv) {
   script *scr;
   
