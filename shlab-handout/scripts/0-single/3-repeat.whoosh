@@ -1,0 +1,10 @@
+# Check repeats
+
+repeat 5 /bin/echo ok
+
+# Expected output:
+#  ok
+#  ok
+#  ok
+#  ok
+#  ok

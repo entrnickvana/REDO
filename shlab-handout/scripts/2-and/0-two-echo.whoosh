@@ -1,0 +1,7 @@
+# Run two echoes, capturing the outputs separately
+
+/bin/echo one => $a  &&  /bin/echo two => $b
+/bin/echo $b $a
+
+# Expected output:
+#  two one

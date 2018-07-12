@@ -1,0 +1,9 @@
+# Make sure that a signal is reported instead of an exit status if a
+# process is killed with a signal
+
+/bin/bash -c "kill $$" => $sigint
+/bin/bash -c "kill -HUP $$" => $sighup
+/bin/echo $sigint $sighup
+
+# Expected output:
+#  -15 -1

@@ -1,0 +1,9 @@
+# Make sure that exit status is captured instead of output if the
+# process fails
+
+/bin/bash -c "echo ok; exit 0" => $output
+/bin/bash -c "echo fail; exit 17" => $output
+/bin/echo . $output .
+
+# Expected output:
+#  . 17 .

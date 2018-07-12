@@ -1,0 +1,7 @@
+# Check that "kill" can stop a concurrent bash in "or" mode
+
+/bin/bash -c "sleep 100" => $out @ $sleep  ||  /bin/kill $sleep
+/bin/echo $out
+
+# Expected output:
+#  -15

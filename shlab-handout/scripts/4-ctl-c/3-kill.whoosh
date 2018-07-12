@@ -1,0 +1,9 @@
+# Make sure that command processes are in their own process group
+
+# 0 means "all processes in the same group"
+/bin/bash -c "kill 0" => $sigint
+
+/bin/echo $sigint
+
+# Expected output:
+#  -15

@@ -1,0 +1,12 @@
+# Should wait about 2 seconds before finishing,
+# which checks that "&&" really waits for all
+
+/bin/sleep 1  &&  /bin/echo one
+/bin/echo two  &&  /bin/sleep 1
+
+# Expected output:
+#  one
+#  two
+
+# Minimum seconds:
+#  2

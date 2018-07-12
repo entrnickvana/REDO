@@ -1,0 +1,7 @@
+# Check capturing of output
+
+/bin/echo hello => $output
+/bin/echo $output $output
+
+# Expected output:
+#  hello hello

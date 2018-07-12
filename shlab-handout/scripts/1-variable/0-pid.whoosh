@@ -1,0 +1,7 @@
+# Check capturing a process ID
+
+/bin/echo @ $echo
+/bin/echo $echo
+
+# Expect output matching:
+#  [0-9]+

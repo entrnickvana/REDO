@@ -1,0 +1,9 @@
+# Like 1-echo, but with repeats to help check that file
+# descriptors are cleaned up as needed
+
+repeat 1000 /bin/echo hello => $output
+repeat 2 /bin/echo $output $output
+
+# Expected output:
+#  hello hello
+#  hello hello

@@ -1,0 +1,13 @@
+# Should wait about 2 seconds before finishing
+
+/bin/echo start
+/bin/sleep 2
+/bin/echo end
+
+
+# Expected output:
+#  start
+#  end
+
+# Minimum seconds:
+#  2

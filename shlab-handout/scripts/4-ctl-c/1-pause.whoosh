@@ -1,0 +1,17 @@
+# Multiple Ctl-Cs needed, but middle group should complete
+
+/bin/bash -c "sleep 1000"
+/bin/echo one
+
+/bin/bash -c "sleep 1000"
+/bin/echo two
+
+# Needed input:
+#  sleep 1
+#  ctl-c
+#  sleep 1
+#  ctl-c
+
+# Expected output:
+#  one
+#  two

@@ -1,0 +1,6 @@
+# Check that "kill" can stop a concurrent bash
+
+/bin/bash -c "sleep 100" @ $sleep  &&  /bin/kill $sleep  &&  /bin/echo $sleep
+
+# Expect output matching:
+#  [0-9]+

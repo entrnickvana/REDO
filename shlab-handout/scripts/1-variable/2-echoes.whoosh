@@ -1,0 +1,8 @@
+# Like the 1-echo, but with repeats
+
+/bin/echo hello => $output
+repeat 2 /bin/echo $output $output
+
+# Expected output:
+#  hello hello
+#  hello hello

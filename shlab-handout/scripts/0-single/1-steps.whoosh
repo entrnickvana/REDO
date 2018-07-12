@@ -1,0 +1,10 @@
+# Try multiple commands
+
+/bin/echo one
+/bin/echo two
+/bin/echo 3
+
+# Expected output:
+#  one
+#  two
+#  3

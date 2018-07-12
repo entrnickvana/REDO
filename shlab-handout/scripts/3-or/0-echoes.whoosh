@@ -1,0 +1,7 @@
+# Run two echoes, where one may complete before the other
+
+/bin/echo -n one  ||  /bin/echo -n two
+/bin/echo
+
+# Expect output matching:
+#   one|two|onetwo|twoone

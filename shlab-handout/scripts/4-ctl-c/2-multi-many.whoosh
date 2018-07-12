@@ -1,0 +1,25 @@
+# Multiple groups that need to be interrupted, and multiple
+# commands in each group
+
+/bin/echo init => $out
+# Since `cat` is stuck on input, it should get killed by Ctl-C
+/bin/bash -c "sleep 1000"  &&  /bin/cat => $out  &&  /bin/sleep 1000
+
+# Similar to above, but with  "or" mode:
+/bin/bash -c "sleep 1000"  ||  /bin/cat => $out  ||  /bin/sleep 1000
+
+# Echo quickly, expecting that it will complete before Ctl-C
+/bin/echo fast => $eout  &&  /bin/cat => $out  &&  /bin/sleep 1000
+
+/bin/echo $out $eout
+
+# Needed input:
+#  sleep 1
+#  ctl-c
+#  sleep 1
+#  ctl-c
+#  sleep 1
+#  ctl-c
+
+# Expected output:
+#  -15 fast

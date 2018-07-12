@@ -1,0 +1,10 @@
+# Echo should finish before sleeps
+
+/bin/echo finished  ||  /bin/sleep 10000
+/bin/sleep 10000    ||  /bin/echo again
+/bin/sleep 10000 || /bin/bash -c "sleep 10000" || /bin/echo middle || /bin/sleep 10000 || /bin/sleep 10000
+
+# Expected output:
+#  finished
+#  again
+#  middle

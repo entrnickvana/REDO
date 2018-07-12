@@ -1,0 +1,7 @@
+# Check sending variable as input
+
+/bin/echo calico => $kind
+$kind => /bin/cat
+
+# Expected output:
+#  calico

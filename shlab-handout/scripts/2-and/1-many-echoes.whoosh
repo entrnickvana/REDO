@@ -1,0 +1,45 @@
+# Make sure all echoes finish
+
+repeat 10  /bin/echo x  &&  /bin/echo x  &&  /bin/echo x  &&  /bin/echo x
+
+# Expected output:
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
+#  x
